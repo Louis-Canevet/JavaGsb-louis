@@ -23,10 +23,13 @@ public class ConnexionMySql {
     }
 
 	public static void connecterBd() {
-		String url = "jdbc:mysql://127.0.0.1:3306/gsbJava";
+		//String url = "jdbc:mysql://127.0.0.1:3306/gsbJava";
+		String url = "jdbc:mysql://192.179.1.12/gsbJava";
+
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			cnx = DriverManager.getConnection(url, "root", "");
+			//cnx = DriverManager.getConnection(url, "root", "");
+			cnx = DriverManager.getConnection(url, "admindb", "password");
 		} catch (Exception e) {
 			System.out.println("Echec lors de la connexion");
 			e.printStackTrace();
